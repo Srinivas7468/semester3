@@ -1,0 +1,24 @@
+package week11.class_problems;
+
+import java.util.Scanner;
+
+class Book {
+    String isbn, title;
+
+    Book(String isbn, String title) {
+        this.isbn = isbn;
+        this.title = title;
+    }
+}
+
+public class LibraryCatalogLookup {
+
+    static String findBook(Book[] catalog, String target) {
+        int left = 0, right = catalog.length - 1;
+
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            int cmp = catalog[mid].isbn.compareTo(target);
+
+            if (cmp == 0)
+                return catalog[mi
